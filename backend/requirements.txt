@@ -1,0 +1,23 @@
+# Core Web Framework
+fastapi>=0.111.0,<1.0.0
+uvicorn[standard]>=0.30.0,<1.0.0
+python-multipart>=0.0.9
+
+# Configuration & Data Validation
+pydantic>=2.7.0,<3.0.0
+pydantic-settings>=2.3.0,<3.0.0
+python-dotenv>=1.0.1
+
+# Document Processing (PDF Ingestion)
+pymupdf>=1.24.0
+
+# Embeddings & Vector Search (BGE-M3 & Qdrant)
+fastembed>=0.3.0
+qdrant-client>=1.9.0
+
+# LLM API (Groq)
+groq>=0.9.0
+
+# Testing & HTTP Client
+pytest>=8.2.0
+httpx>=0.27.0

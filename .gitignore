@@ -1,0 +1,77 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# Python byte code and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Environment files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+.npm/
+.vite/
+
+# Application Data & Uploads (protect user data & local vector store)
+data/uploads/*
+data/uploads/**
+!data/uploads/.gitkeep
+data/qdrant_storage/*
+data/qdrant_storage/**
+!data/qdrant_storage/.gitkeep
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+data/*.lock
+
+# Book & Document uploads (protect user data & copyrighted text)
+*.pdf
+*.epub
+*.mobi
+*.azw3
+*.djvu
+
+# Vector Store / Database files
+*.qdrant/
+qdrant_data/
+storage/
+
+# Downloaded model weights & artifacts
+models/
+weights/
+*.bin
+*.onnx
+*.safetensors
+
+# IDE & Operating System
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & Temporary files
+logs/
+*.log
+tmp/
+temp/

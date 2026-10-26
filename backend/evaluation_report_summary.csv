@@ -1,0 +1,5 @@
+pipeline_type,sample_count,mean_recall_at_k,mean_precision_at_k,mean_mrr,mean_hit_rate_at_k,mean_faithfulness,mean_unsupported_claim_rate,mean_answer_relevance,mean_answer_correctness,mean_context_relevance,mean_abstention_quality,mean_citation_validity,mean_citation_precision,mean_citation_recall,mean_essential_concepts_coverage,mean_central_thesis_representation,mean_important_qualifications_retained,mean_supporting_reasoning_included,mean_cross_chapter_connections,failure_case_count,mean_latency_ms,duration_seconds
+baseline_rag,6,1.0,0.2917,0.8333,1.0,0.2555,0.7445,0.2205,0.1113,0.375,1.0,1.0,0.5555,1.0,0.0,0.9583,0.4167,0.3667,0.9,6,3.33,0.03
+hybrid_rag,6,1.0,0.2917,0.8333,1.0,0.2555,0.7445,0.2205,0.1113,0.375,1.0,1.0,0.5555,1.0,0.0,0.9583,0.4167,0.3667,0.9,6,2.83,0.027
+hierarchical_rag,6,1.0,0.2917,0.8333,1.0,0.4222,0.5778,0.2205,0.1552,0.375,1.0,1.0,0.7778,0.9167,0.0,1.0,0.4167,0.3667,0.9,5,34.17,0.216
+hierarchical_rag_rerank,6,1.0,0.2917,0.8333,1.0,0.4222,0.5778,0.2205,0.1552,0.375,1.0,1.0,0.7778,0.9167,0.0,1.0,0.4167,0.3667,0.9,5,36.67,0.23

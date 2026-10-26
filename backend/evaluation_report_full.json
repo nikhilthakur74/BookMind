@@ -1,0 +1,3098 @@
+{
+  "book_id": "book_b598eebf_104350",
+  "dataset_id": "ds_distributed_systems_v1",
+  "dataset_version": "1.0.0",
+  "timestamp": "2026-10-20T17:13:59.944970Z",
+  "runs": {
+    "baseline_rag": {
+      "run_id": "run_book_b59_baseline_rag_76cb23",
+      "book_id": "book_b598eebf_104350",
+      "dataset_id": "ds_distributed_systems_v1",
+      "dataset_version": "1.0.0",
+      "pipeline_type": "baseline_rag",
+      "pipeline_config": {
+        "top_k": 4,
+        "validated_only": true,
+        "enable_llm_judge": false,
+        "embedding_model": "BAAI/bge-m3",
+        "embedding_provider": "mock",
+        "llm_model": "llama-3.3-70b-versatile",
+        "llm_provider": "mock",
+        "prompt_version": "v1.0"
+      },
+      "timestamp": "2026-10-20T17:13:59.454087Z",
+      "duration_seconds": 0.03,
+      "aggregate_metrics": {
+        "sample_count": 6,
+        "mean_recall_at_k": 1.0,
+        "mean_precision_at_k": 0.2917,
+        "mean_mrr": 0.8333,
+        "mean_hit_rate_at_k": 1.0,
+        "mean_faithfulness": 0.2555,
+        "mean_unsupported_claim_rate": 0.7445,
+        "mean_answer_relevance": 0.2205,
+        "mean_answer_correctness": 0.1113,
+        "mean_context_relevance": 0.375,
+        "mean_abstention_quality": 1.0,
+        "mean_citation_validity": 1.0,
+        "mean_citation_precision": 0.5555,
+        "mean_citation_recall": 1.0,
+        "mean_essential_concepts_coverage": 0.0,
+        "mean_central_thesis_representation": 0.9583,
+        "mean_important_qualifications_retained": 0.4167,
+        "mean_supporting_reasoning_included": 0.3667,
+        "mean_cross_chapter_connections": 0.9,
+        "failure_case_count": 6,
+        "mean_latency_ms": 3.33
+      },
+      "sample_results": [
+        {
+          "item_id": "eval_001",
+          "question": "What condition must be satisfied for a Raft candidate to transition to leader?",
+          "question_type": "factual",
+          "pipeline_type": "baseline_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 1 (chunk book_b598eebf_104350_c0000), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 1.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.0,
+            "context_relevance": 0.25,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.3333,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "strict majority": false,
+                    "requesting votes": false,
+                    "leader election": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 5,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_002",
+          "question": "How does replicated log matching ensure identical state transitions across replicas?",
+          "question_type": "conceptual",
+          "pipeline_type": "baseline_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 2 (chunk book_b598eebf_104350_c0001), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 2.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0003",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.0,
+            "context_relevance": 0.5,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.3333,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "replicated state machine": false,
+                    "majority of followers": false,
+                    "persistent storage": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 4,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_003",
+          "question": "What is the central crux and primary conclusion of Chapter 1?",
+          "question_type": "summarization",
+          "pipeline_type": "baseline_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 2 (chunk book_b598eebf_104350_c0001), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 2.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.5,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.75,
+            "answer_correctness": 0.2154,
+            "context_relevance": 0.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "distributed consensus": false,
+                    "quorum agreement": false,
+                    "split-brain": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 2,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_004",
+          "question": "How does leader election quorum in Chapter 1 relate to minority partition behavior in Chapter 2?",
+          "question_type": "multi_hop",
+          "pipeline_type": "baseline_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 1 (chunk book_b598eebf_104350_c0000), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 1.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.5,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.1562,
+            "answer_correctness": 0.0625,
+            "context_relevance": 1.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 0.4,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "majority quorum": false,
+                    "minority partitions": false,
+                    "refuse write requests": false,
+                    "split-brain": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 0.4,
+                  "notes": "Weak or one-sided comparison lacking balanced conceptual synthesis"
+                }
+              }
+            }
+          },
+          "latency_ms": 4,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_005",
+          "question": "Compare crash-stop fault tolerance versus Byzantine fault tolerance.",
+          "question_type": "comparison",
+          "pipeline_type": "baseline_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000"
+          ],
+          "generated_answer": "Comparative Crux: The author contrasts both principles by their foundational assumptions and scaling properties.\n\nAccording to the source passages (pp. 4-4), both concepts address structural organization, where chapter 2: fault tolerance and partition handling section 2. In contrast to simple single-node designs, both approaches differ in execution: the first operates via decentralized consensus whereas the second relies on hierarchical control. Source claims explicitly highlight this distinction while model interpretation notes their complementary utility.",
+          "crux_summary": "Comparative Crux: The author contrasts both principles by their foundational assumptions and scaling properties.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0003",
+              "page_start": 4,
+              "page_end": 4,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 4,
+              "page_end": 4,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 4,
+              "page_end": 4,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.2,
+            "unsupported_claim_rate": 0.8,
+            "answer_relevance": 0.4167,
+            "answer_correctness": 0.087,
+            "context_relevance": 0.5,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.3333,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 1.0,
+              "supporting_reasoning_included": 0.7,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "crash-stop": false,
+                    "Byzantine": false,
+                    "3f + 1": false,
+                    "conflicting messages": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 1.0,
+                  "notes": "Multiple qualifications preserved (in contrast to, whereas)"
+                },
+                "supporting_reasoning": {
+                  "score": 0.7,
+                  "notes": "Basic causal reasoning present (operates via)"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "Evidenced comparative synthesis across concepts (both)"
+                }
+              }
+            }
+          },
+          "latency_ms": 2,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_006",
+          "question": "What temperature should an oven be set to when baking chocolate chip cookies?",
+          "question_type": "unanswerable",
+          "pipeline_type": "baseline_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "After reviewing the retrieved passages from the book, no evidence or discussion regarding this subject was found. The book's scope does not cover this topic.",
+          "crux_summary": "The provided text from this book does not contain sufficient evidence to answer this question.",
+          "generated_citations": [],
+          "insufficient_evidence": true,
+          "confidence": "insufficient",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.0,
+            "mrr": 0.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.0,
+            "unsupported_claim_rate": 1.0,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.303,
+            "context_relevance": 0.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 1.0,
+              "citation_recall": 1.0,
+              "total_citations": 0,
+              "valid_citations": 0
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 0.75,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "insufficient evidence": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 0.75,
+                  "notes": "Primary thesis stated in opening sentence without formal crux label"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 3,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        }
+      ],
+      "failure_cases": [
+        {
+          "item_id": "eval_001",
+          "question": "What condition must be satisfied for a Raft candidate to transition to leader?",
+          "question_type": "factual",
+          "pipeline_type": "baseline_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_002",
+          "question": "How does replicated log matching ensure identical state transitions across replicas?",
+          "question_type": "conceptual",
+          "pipeline_type": "baseline_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0001"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_003",
+          "question": "What is the central crux and primary conclusion of Chapter 1?",
+          "question_type": "summarization",
+          "pipeline_type": "baseline_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_004",
+          "question": "How does leader election quorum in Chapter 1 relate to minority partition behavior in Chapter 2?",
+          "question_type": "multi_hop",
+          "pipeline_type": "baseline_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_005",
+          "question": "Compare crash-stop fault tolerance versus Byzantine fault tolerance.",
+          "question_type": "comparison",
+          "pipeline_type": "baseline_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0003"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.2,
+          "unsupported_claim_rate": 0.8,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_006",
+          "question": "What temperature should an oven be set to when baking chocolate chip cookies?",
+          "question_type": "unanswerable",
+          "pipeline_type": "baseline_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.0,
+          "unsupported_claim_rate": 1.0,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        }
+      ]
+    },
+    "hybrid_rag": {
+      "run_id": "run_book_b59_hybrid_rag_0f13e5",
+      "book_id": "book_b598eebf_104350",
+      "dataset_id": "ds_distributed_systems_v1",
+      "dataset_version": "1.0.0",
+      "pipeline_type": "hybrid_rag",
+      "pipeline_config": {
+        "top_k": 4,
+        "validated_only": true,
+        "enable_llm_judge": false,
+        "embedding_model": "BAAI/bge-m3",
+        "embedding_provider": "mock",
+        "llm_model": "llama-3.3-70b-versatile",
+        "llm_provider": "mock",
+        "prompt_version": "v1.0"
+      },
+      "timestamp": "2026-10-20T17:13:59.487021Z",
+      "duration_seconds": 0.027,
+      "aggregate_metrics": {
+        "sample_count": 6,
+        "mean_recall_at_k": 1.0,
+        "mean_precision_at_k": 0.2917,
+        "mean_mrr": 0.8333,
+        "mean_hit_rate_at_k": 1.0,
+        "mean_faithfulness": 0.2555,
+        "mean_unsupported_claim_rate": 0.7445,
+        "mean_answer_relevance": 0.2205,
+        "mean_answer_correctness": 0.1113,
+        "mean_context_relevance": 0.375,
+        "mean_abstention_quality": 1.0,
+        "mean_citation_validity": 1.0,
+        "mean_citation_precision": 0.5555,
+        "mean_citation_recall": 1.0,
+        "mean_essential_concepts_coverage": 0.0,
+        "mean_central_thesis_representation": 0.9583,
+        "mean_important_qualifications_retained": 0.4167,
+        "mean_supporting_reasoning_included": 0.3667,
+        "mean_cross_chapter_connections": 0.9,
+        "failure_case_count": 6,
+        "mean_latency_ms": 2.83
+      },
+      "sample_results": [
+        {
+          "item_id": "eval_001",
+          "question": "What condition must be satisfied for a Raft candidate to transition to leader?",
+          "question_type": "factual",
+          "pipeline_type": "hybrid_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 1 (chunk book_b598eebf_104350_c0000), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 1.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.0,
+            "context_relevance": 0.25,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.3333,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "strict majority": false,
+                    "requesting votes": false,
+                    "leader election": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 2,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_002",
+          "question": "How does replicated log matching ensure identical state transitions across replicas?",
+          "question_type": "conceptual",
+          "pipeline_type": "hybrid_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 2 (chunk book_b598eebf_104350_c0001), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 2.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0003",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.0,
+            "context_relevance": 0.5,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.3333,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "replicated state machine": false,
+                    "majority of followers": false,
+                    "persistent storage": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 3,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_003",
+          "question": "What is the central crux and primary conclusion of Chapter 1?",
+          "question_type": "summarization",
+          "pipeline_type": "hybrid_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 2 (chunk book_b598eebf_104350_c0001), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 2.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.5,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.75,
+            "answer_correctness": 0.2154,
+            "context_relevance": 0.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "distributed consensus": false,
+                    "quorum agreement": false,
+                    "split-brain": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 3,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_004",
+          "question": "How does leader election quorum in Chapter 1 relate to minority partition behavior in Chapter 2?",
+          "question_type": "multi_hop",
+          "pipeline_type": "hybrid_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 1 (chunk book_b598eebf_104350_c0000), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 1.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.5,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.1562,
+            "answer_correctness": 0.0625,
+            "context_relevance": 1.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 0.4,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "majority quorum": false,
+                    "minority partitions": false,
+                    "refuse write requests": false,
+                    "split-brain": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 0.4,
+                  "notes": "Weak or one-sided comparison lacking balanced conceptual synthesis"
+                }
+              }
+            }
+          },
+          "latency_ms": 4,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_005",
+          "question": "Compare crash-stop fault tolerance versus Byzantine fault tolerance.",
+          "question_type": "comparison",
+          "pipeline_type": "hybrid_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000"
+          ],
+          "generated_answer": "Comparative Crux: The author contrasts both principles by their foundational assumptions and scaling properties.\n\nAccording to the source passages (pp. 4-4), both concepts address structural organization, where chapter 2: fault tolerance and partition handling section 2. In contrast to simple single-node designs, both approaches differ in execution: the first operates via decentralized consensus whereas the second relies on hierarchical control. Source claims explicitly highlight this distinction while model interpretation notes their complementary utility.",
+          "crux_summary": "Comparative Crux: The author contrasts both principles by their foundational assumptions and scaling properties.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0003",
+              "page_start": 4,
+              "page_end": 4,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 4,
+              "page_end": 4,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 4,
+              "page_end": 4,
+              "chapter": "Chapter 1",
+              "section": "Section 1.1",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.2,
+            "unsupported_claim_rate": 0.8,
+            "answer_relevance": 0.4167,
+            "answer_correctness": 0.087,
+            "context_relevance": 0.5,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.3333,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 1.0,
+              "supporting_reasoning_included": 0.7,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "crash-stop": false,
+                    "Byzantine": false,
+                    "3f + 1": false,
+                    "conflicting messages": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 1.0,
+                  "notes": "Multiple qualifications preserved (in contrast to, whereas)"
+                },
+                "supporting_reasoning": {
+                  "score": 0.7,
+                  "notes": "Basic causal reasoning present (operates via)"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "Evidenced comparative synthesis across concepts (both)"
+                }
+              }
+            }
+          },
+          "latency_ms": 1,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_006",
+          "question": "What temperature should an oven be set to when baking chocolate chip cookies?",
+          "question_type": "unanswerable",
+          "pipeline_type": "hybrid_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0000"
+          ],
+          "generated_answer": "After reviewing the retrieved passages from the book, no evidence or discussion regarding this subject was found. The book's scope does not cover this topic.",
+          "crux_summary": "The provided text from this book does not contain sufficient evidence to answer this question.",
+          "generated_citations": [],
+          "insufficient_evidence": true,
+          "confidence": "insufficient",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.0,
+            "mrr": 0.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.0,
+            "unsupported_claim_rate": 1.0,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.303,
+            "context_relevance": 0.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 1.0,
+              "citation_recall": 1.0,
+              "total_citations": 0,
+              "valid_citations": 0
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 0.75,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "insufficient evidence": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 0.75,
+                  "notes": "Primary thesis stated in opening sentence without formal crux label"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 4,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        }
+      ],
+      "failure_cases": [
+        {
+          "item_id": "eval_001",
+          "question": "What condition must be satisfied for a Raft candidate to transition to leader?",
+          "question_type": "factual",
+          "pipeline_type": "hybrid_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_002",
+          "question": "How does replicated log matching ensure identical state transitions across replicas?",
+          "question_type": "conceptual",
+          "pipeline_type": "hybrid_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0001"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_003",
+          "question": "What is the central crux and primary conclusion of Chapter 1?",
+          "question_type": "summarization",
+          "pipeline_type": "hybrid_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_004",
+          "question": "How does leader election quorum in Chapter 1 relate to minority partition behavior in Chapter 2?",
+          "question_type": "multi_hop",
+          "pipeline_type": "hybrid_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_005",
+          "question": "Compare crash-stop fault tolerance versus Byzantine fault tolerance.",
+          "question_type": "comparison",
+          "pipeline_type": "hybrid_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0003"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.2,
+          "unsupported_claim_rate": 0.8,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_006",
+          "question": "What temperature should an oven be set to when baking chocolate chip cookies?",
+          "question_type": "unanswerable",
+          "pipeline_type": "hybrid_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0000"
+          ],
+          "expected_chunk_ids": [],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.0,
+          "unsupported_claim_rate": 1.0,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        }
+      ]
+    },
+    "hierarchical_rag": {
+      "run_id": "run_book_b59_hierarchical_rag_72a13b",
+      "book_id": "book_b598eebf_104350",
+      "dataset_id": "ds_distributed_systems_v1",
+      "dataset_version": "1.0.0",
+      "pipeline_type": "hierarchical_rag",
+      "pipeline_config": {
+        "top_k": 4,
+        "validated_only": true,
+        "enable_llm_judge": false,
+        "embedding_model": "BAAI/bge-m3",
+        "embedding_provider": "mock",
+        "llm_model": "llama-3.3-70b-versatile",
+        "llm_provider": "mock",
+        "prompt_version": "v1.0"
+      },
+      "timestamp": "2026-10-20T17:13:59.709056Z",
+      "duration_seconds": 0.216,
+      "aggregate_metrics": {
+        "sample_count": 6,
+        "mean_recall_at_k": 1.0,
+        "mean_precision_at_k": 0.2917,
+        "mean_mrr": 0.8333,
+        "mean_hit_rate_at_k": 1.0,
+        "mean_faithfulness": 0.4222,
+        "mean_unsupported_claim_rate": 0.5778,
+        "mean_answer_relevance": 0.2205,
+        "mean_answer_correctness": 0.1552,
+        "mean_context_relevance": 0.375,
+        "mean_abstention_quality": 1.0,
+        "mean_citation_validity": 1.0,
+        "mean_citation_precision": 0.7778,
+        "mean_citation_recall": 0.9167,
+        "mean_essential_concepts_coverage": 0.0,
+        "mean_central_thesis_representation": 1.0,
+        "mean_important_qualifications_retained": 0.4167,
+        "mean_supporting_reasoning_included": 0.3667,
+        "mean_cross_chapter_connections": 0.9,
+        "failure_case_count": 5,
+        "mean_latency_ms": 34.17
+      },
+      "sample_results": [
+        {
+          "item_id": "eval_001",
+          "question": "What condition must be satisfied for a Raft candidate to transition to leader?",
+          "question_type": "factual",
+          "pipeline_type": "hierarchical_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 1 (chunk book_b598eebf_104350_c0000), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 1.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.1: Quorum Consensus and Leader Election",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.1: Quorum Consensus and Leader Election",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.2: Replicated State Machines and Log Matching",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.0,
+            "context_relevance": 0.25,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "strict majority": false,
+                    "requesting votes": false,
+                    "leader election": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 45,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_002",
+          "question": "How does replicated log matching ensure identical state transitions across replicas?",
+          "question_type": "conceptual",
+          "pipeline_type": "hierarchical_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 2 (chunk book_b598eebf_104350_c0001), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 2.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.2: Replicated State Machines and Log Matching",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.2: Replicated State Machines and Log Matching",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.1: Quorum Consensus and Leader Election",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.0,
+            "context_relevance": 0.5,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "replicated state machine": false,
+                    "majority of followers": false,
+                    "persistent storage": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 31,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_003",
+          "question": "What is the central crux and primary conclusion of Chapter 1?",
+          "question_type": "summarization",
+          "pipeline_type": "hierarchical_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 1 (chunk book_b598eebf_104350_c0001), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 2.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.2: Replicated State Machines and Log Matching",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.2: Replicated State Machines and Log Matching",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 3,
+              "page_end": 3,
+              "chapter": "Chapter 2: Fault Tolerance and Partition Handling",
+              "section": "Section 2.1: Network Partitions and Split-Brain Prevention",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.5,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.75,
+            "answer_correctness": 0.2154,
+            "context_relevance": 0.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 0.5,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "distributed consensus": false,
+                    "quorum agreement": false,
+                    "split-brain": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 36,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_004",
+          "question": "How does leader election quorum in Chapter 1 relate to minority partition behavior in Chapter 2?",
+          "question_type": "multi_hop",
+          "pipeline_type": "hierarchical_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 1 (chunk book_b598eebf_104350_c0000), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 2.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.1: Quorum Consensus and Leader Election",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.1: Quorum Consensus and Leader Election",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 3,
+              "page_end": 3,
+              "chapter": "Chapter 2: Fault Tolerance and Partition Handling",
+              "section": "Section 2.1: Network Partitions and Split-Brain Prevention",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.5,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.1562,
+            "answer_correctness": 0.0625,
+            "context_relevance": 1.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 1.0,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 0.4,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "majority quorum": false,
+                    "minority partitions": false,
+                    "refuse write requests": false,
+                    "split-brain": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 0.4,
+                  "notes": "Weak or one-sided comparison lacking balanced conceptual synthesis"
+                }
+              }
+            }
+          },
+          "latency_ms": 28,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_005",
+          "question": "Compare crash-stop fault tolerance versus Byzantine fault tolerance.",
+          "question_type": "comparison",
+          "pipeline_type": "hierarchical_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000"
+          ],
+          "generated_answer": "Comparative Crux: The author contrasts both principles by their foundational assumptions and scaling properties.\n\nAccording to the source passages (pp. 4-4), both concepts address structural organization, where chapter 2: fault tolerance and partition handling section 2. In contrast to simple single-node designs, both approaches differ in execution: the first operates via decentralized consensus whereas the second relies on hierarchical control. Source claims explicitly highlight this distinction while model interpretation notes their complementary utility.",
+          "crux_summary": "Comparative Crux: The author contrasts both principles by their foundational assumptions and scaling properties.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0003",
+              "page_start": 4,
+              "page_end": 4,
+              "chapter": "Chapter 2: Fault Tolerance and Partition Handling",
+              "section": "Section 2.2: Byzantine Faults and Asymmetric Communication",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0003",
+              "page_start": 4,
+              "page_end": 4,
+              "chapter": "Chapter 2: Fault Tolerance and Partition Handling",
+              "section": "Section 2.2: Byzantine Faults and Asymmetric Communication",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 3,
+              "page_end": 3,
+              "chapter": "Chapter 2: Fault Tolerance and Partition Handling",
+              "section": "Section 2.1: Network Partitions and Split-Brain Prevention",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.2,
+            "unsupported_claim_rate": 0.8,
+            "answer_relevance": 0.4167,
+            "answer_correctness": 0.087,
+            "context_relevance": 0.5,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 1.0,
+              "supporting_reasoning_included": 0.7,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "crash-stop": false,
+                    "Byzantine": false,
+                    "3f + 1": false,
+                    "conflicting messages": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 1.0,
+                  "notes": "Multiple qualifications preserved (in contrast to, whereas)"
+                },
+                "supporting_reasoning": {
+                  "score": 0.7,
+                  "notes": "Basic causal reasoning present (operates via)"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "Evidenced comparative synthesis across concepts (both)"
+                }
+              }
+            }
+          },
+          "latency_ms": 34,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_006",
+          "question": "What temperature should an oven be set to when baking chocolate chip cookies?",
+          "question_type": "unanswerable",
+          "pipeline_type": "hierarchical_rag",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0000"
+          ],
+          "generated_answer": "The provided text from this book does not contain sufficient evidence to answer this question.\n\nAfter reviewing the retrieved passages from the book, no evidence or discussion regarding this subject was found. The book's scope does not cover this topic.",
+          "crux_summary": "The provided text from this book does not contain sufficient evidence to answer this question.",
+          "generated_citations": [],
+          "insufficient_evidence": true,
+          "confidence": "insufficient",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.0,
+            "mrr": 0.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 1.0,
+            "unsupported_claim_rate": 0.0,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.5663,
+            "context_relevance": 0.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 1.0,
+              "citation_recall": 1.0,
+              "total_citations": 0,
+              "valid_citations": 0
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "insufficient evidence": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 31,
+          "token_usage": null,
+          "is_failure": false,
+          "failure_reasons": []
+        }
+      ],
+      "failure_cases": [
+        {
+          "item_id": "eval_001",
+          "question": "What condition must be satisfied for a Raft candidate to transition to leader?",
+          "question_type": "factual",
+          "pipeline_type": "hierarchical_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_002",
+          "question": "How does replicated log matching ensure identical state transitions across replicas?",
+          "question_type": "conceptual",
+          "pipeline_type": "hierarchical_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0001"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_003",
+          "question": "What is the central crux and primary conclusion of Chapter 1?",
+          "question_type": "summarization",
+          "pipeline_type": "hierarchical_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_004",
+          "question": "How does leader election quorum in Chapter 1 relate to minority partition behavior in Chapter 2?",
+          "question_type": "multi_hop",
+          "pipeline_type": "hierarchical_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_005",
+          "question": "Compare crash-stop fault tolerance versus Byzantine fault tolerance.",
+          "question_type": "comparison",
+          "pipeline_type": "hierarchical_rag",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0003"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.2,
+          "unsupported_claim_rate": 0.8,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        }
+      ]
+    },
+    "hierarchical_rag_rerank": {
+      "run_id": "run_book_b59_hierarchical_rag_rerank_249944",
+      "book_id": "book_b598eebf_104350",
+      "dataset_id": "ds_distributed_systems_v1",
+      "dataset_version": "1.0.0",
+      "pipeline_type": "hierarchical_rag_rerank",
+      "pipeline_config": {
+        "top_k": 4,
+        "validated_only": true,
+        "enable_llm_judge": false,
+        "embedding_model": "BAAI/bge-m3",
+        "embedding_provider": "mock",
+        "llm_model": "llama-3.3-70b-versatile",
+        "llm_provider": "mock",
+        "prompt_version": "v1.0"
+      },
+      "timestamp": "2026-10-20T17:13:59.941691Z",
+      "duration_seconds": 0.23,
+      "aggregate_metrics": {
+        "sample_count": 6,
+        "mean_recall_at_k": 1.0,
+        "mean_precision_at_k": 0.2917,
+        "mean_mrr": 0.8333,
+        "mean_hit_rate_at_k": 1.0,
+        "mean_faithfulness": 0.4222,
+        "mean_unsupported_claim_rate": 0.5778,
+        "mean_answer_relevance": 0.2205,
+        "mean_answer_correctness": 0.1552,
+        "mean_context_relevance": 0.375,
+        "mean_abstention_quality": 1.0,
+        "mean_citation_validity": 1.0,
+        "mean_citation_precision": 0.7778,
+        "mean_citation_recall": 0.9167,
+        "mean_essential_concepts_coverage": 0.0,
+        "mean_central_thesis_representation": 1.0,
+        "mean_important_qualifications_retained": 0.4167,
+        "mean_supporting_reasoning_included": 0.3667,
+        "mean_cross_chapter_connections": 0.9,
+        "failure_case_count": 5,
+        "mean_latency_ms": 36.67
+      },
+      "sample_results": [
+        {
+          "item_id": "eval_001",
+          "question": "What condition must be satisfied for a Raft candidate to transition to leader?",
+          "question_type": "factual",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 1 (chunk book_b598eebf_104350_c0000), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 1.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.1: Quorum Consensus and Leader Election",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.1: Quorum Consensus and Leader Election",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.2: Replicated State Machines and Log Matching",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.0,
+            "context_relevance": 0.25,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "strict majority": false,
+                    "requesting votes": false,
+                    "leader election": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 33,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_002",
+          "question": "How does replicated log matching ensure identical state transitions across replicas?",
+          "question_type": "conceptual",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 2 (chunk book_b598eebf_104350_c0001), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 2.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.2: Replicated State Machines and Log Matching",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.2: Replicated State Machines and Log Matching",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.1: Quorum Consensus and Leader Election",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.0,
+            "context_relevance": 0.5,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "replicated state machine": false,
+                    "majority of followers": false,
+                    "persistent storage": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 34,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_003",
+          "question": "What is the central crux and primary conclusion of Chapter 1?",
+          "question_type": "summarization",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 1 (chunk book_b598eebf_104350_c0001), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 2.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.2: Replicated State Machines and Log Matching",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0001",
+              "page_start": 2,
+              "page_end": 2,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.2: Replicated State Machines and Log Matching",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 3,
+              "page_end": 3,
+              "chapter": "Chapter 2: Fault Tolerance and Partition Handling",
+              "section": "Section 2.1: Network Partitions and Split-Brain Prevention",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.2: Replicated State Machines and Log Matching Log r"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.5,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.75,
+            "answer_correctness": 0.2154,
+            "context_relevance": 0.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 0.5,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "distributed consensus": false,
+                    "quorum agreement": false,
+                    "split-brain": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 35,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_004",
+          "question": "How does leader election quorum in Chapter 1 relate to minority partition behavior in Chapter 2?",
+          "question_type": "multi_hop",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0003"
+          ],
+          "generated_answer": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.\n\nBased on the source evidence on page 1 (chunk book_b598eebf_104350_c0000), the author explicitly states that chapter 1: the core principles of distributed architecture section 1. Furthermore, multi-passage synthesis reveals that this directly aligns with the broader thesis established on page 2.",
+          "crux_summary": "Direct Crux: The author's central finding directly addresses the inquiry by establishing foundational evidence.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.1: Quorum Consensus and Leader Election",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0000",
+              "page_start": 1,
+              "page_end": 1,
+              "chapter": "Chapter 1: The Core Principles of Distributed Architecture",
+              "section": "Section 1.1: Quorum Consensus and Leader Election",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 3,
+              "page_end": 3,
+              "chapter": "Chapter 2: Fault Tolerance and Partition Handling",
+              "section": "Section 2.1: Network Partitions and Split-Brain Prevention",
+              "quoted_snippet": "Chapter 1: The Core Principles of Distributed Architecture Section 1.1: Quorum Consensus and Leader Election Distributed"
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.5,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.3333,
+            "unsupported_claim_rate": 0.6667,
+            "answer_relevance": 0.1562,
+            "answer_correctness": 0.0625,
+            "context_relevance": 1.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 1.0,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 0.4,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "majority quorum": false,
+                    "minority partitions": false,
+                    "refuse write requests": false,
+                    "split-brain": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 0.4,
+                  "notes": "Weak or one-sided comparison lacking balanced conceptual synthesis"
+                }
+              }
+            }
+          },
+          "latency_ms": 35,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_005",
+          "question": "Compare crash-stop fault tolerance versus Byzantine fault tolerance.",
+          "question_type": "comparison",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000"
+          ],
+          "generated_answer": "Comparative Crux: The author contrasts both principles by their foundational assumptions and scaling properties.\n\nAccording to the source passages (pp. 4-4), both concepts address structural organization, where chapter 2: fault tolerance and partition handling section 2. In contrast to simple single-node designs, both approaches differ in execution: the first operates via decentralized consensus whereas the second relies on hierarchical control. Source claims explicitly highlight this distinction while model interpretation notes their complementary utility.",
+          "crux_summary": "Comparative Crux: The author contrasts both principles by their foundational assumptions and scaling properties.",
+          "generated_citations": [
+            {
+              "chunk_id": "book_b598eebf_104350_c0003",
+              "page_start": 4,
+              "page_end": 4,
+              "chapter": "Chapter 2: Fault Tolerance and Partition Handling",
+              "section": "Section 2.2: Byzantine Faults and Asymmetric Communication",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0003",
+              "page_start": 4,
+              "page_end": 4,
+              "chapter": "Chapter 2: Fault Tolerance and Partition Handling",
+              "section": "Section 2.2: Byzantine Faults and Asymmetric Communication",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            },
+            {
+              "chunk_id": "book_b598eebf_104350_c0002",
+              "page_start": 3,
+              "page_end": 3,
+              "chapter": "Chapter 2: Fault Tolerance and Partition Handling",
+              "section": "Section 2.1: Network Partitions and Split-Brain Prevention",
+              "quoted_snippet": "Chapter 2: Fault Tolerance and Partition Handling Section 2.2: Byzantine Faults and Asymmetric Communication Crash-stop "
+            }
+          ],
+          "insufficient_evidence": false,
+          "confidence": "high",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.25,
+            "mrr": 1.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 0.2,
+            "unsupported_claim_rate": 0.8,
+            "answer_relevance": 0.4167,
+            "answer_correctness": 0.087,
+            "context_relevance": 0.5,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 0.6667,
+              "citation_recall": 1.0,
+              "total_citations": 3,
+              "valid_citations": 3
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 1.0,
+              "supporting_reasoning_included": 0.7,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "crash-stop": false,
+                    "Byzantine": false,
+                    "3f + 1": false,
+                    "conflicting messages": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 1.0,
+                  "notes": "Multiple qualifications preserved (in contrast to, whereas)"
+                },
+                "supporting_reasoning": {
+                  "score": 0.7,
+                  "notes": "Basic causal reasoning present (operates via)"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "Evidenced comparative synthesis across concepts (both)"
+                }
+              }
+            }
+          },
+          "latency_ms": 42,
+          "token_usage": null,
+          "is_failure": true,
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ]
+        },
+        {
+          "item_id": "eval_006",
+          "question": "What temperature should an oven be set to when baking chocolate chip cookies?",
+          "question_type": "unanswerable",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0000"
+          ],
+          "generated_answer": "The provided text from this book does not contain sufficient evidence to answer this question.\n\nAfter reviewing the retrieved passages from the book, no evidence or discussion regarding this subject was found. The book's scope does not cover this topic.",
+          "crux_summary": "The provided text from this book does not contain sufficient evidence to answer this question.",
+          "generated_citations": [],
+          "insufficient_evidence": true,
+          "confidence": "insufficient",
+          "retrieval_metrics": {
+            "recall_at_k": 1.0,
+            "precision_at_k": 0.0,
+            "mrr": 0.0,
+            "hit_rate_at_k": 1.0,
+            "k": 4
+          },
+          "generation_metrics": {
+            "faithfulness": 1.0,
+            "unsupported_claim_rate": 0.0,
+            "answer_relevance": 0.0,
+            "answer_correctness": 0.5663,
+            "context_relevance": 0.0,
+            "abstention_quality": 1.0,
+            "citations": {
+              "citation_validity": 1.0,
+              "citation_precision": 1.0,
+              "citation_recall": 1.0,
+              "total_citations": 0,
+              "valid_citations": 0
+            },
+            "crux_rubric": {
+              "essential_concepts_coverage": 0.0,
+              "central_thesis_representation": 1.0,
+              "important_qualifications_retained": 0.3,
+              "supporting_reasoning_included": 0.3,
+              "cross_chapter_connections": 1.0,
+              "rubric_breakdown": {
+                "essential_concepts": {
+                  "score": 0.0,
+                  "details": {
+                    "insufficient evidence": false
+                  }
+                },
+                "central_thesis": {
+                  "score": 1.0,
+                  "notes": "Central thesis prominently articulated in crux-first structure"
+                },
+                "important_qualifications": {
+                  "score": 0.3,
+                  "notes": "Few or no explicit qualifications or boundary limits retained"
+                },
+                "supporting_reasoning": {
+                  "score": 0.3,
+                  "notes": "Assertive claims without step-by-step explanatory reasoning"
+                },
+                "cross_chapter_connections": {
+                  "score": 1.0,
+                  "notes": "N/A: Single-concept query does not require cross-chapter links"
+                }
+              }
+            }
+          },
+          "latency_ms": 41,
+          "token_usage": null,
+          "is_failure": false,
+          "failure_reasons": []
+        }
+      ],
+      "failure_cases": [
+        {
+          "item_id": "eval_001",
+          "question": "What condition must be satisfied for a Raft candidate to transition to leader?",
+          "question_type": "factual",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_002",
+          "question": "How does replicated log matching ensure identical state transitions across replicas?",
+          "question_type": "conceptual",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0001"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_003",
+          "question": "What is the central crux and primary conclusion of Chapter 1?",
+          "question_type": "summarization",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0001"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_004",
+          "question": "How does leader election quorum in Chapter 1 relate to minority partition behavior in Chapter 2?",
+          "question_type": "multi_hop",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0003"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0000",
+            "book_b598eebf_104350_c0002"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.3333,
+          "unsupported_claim_rate": 0.6667,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        },
+        {
+          "item_id": "eval_005",
+          "question": "Compare crash-stop fault tolerance versus Byzantine fault tolerance.",
+          "question_type": "comparison",
+          "pipeline_type": "hierarchical_rag_rerank",
+          "failure_reasons": [
+            "Ungrounded Hallucination: Generated statements lack evidence support in retrieved text."
+          ],
+          "retrieved_chunk_ids": [
+            "book_b598eebf_104350_c0003",
+            "book_b598eebf_104350_c0002",
+            "book_b598eebf_104350_c0001",
+            "book_b598eebf_104350_c0000"
+          ],
+          "expected_chunk_ids": [
+            "book_b598eebf_104350_c0003"
+          ],
+          "recall_at_k": 1.0,
+          "faithfulness": 0.2,
+          "unsupported_claim_rate": 0.8,
+          "citation_validity": 1.0,
+          "abstention_quality": 1.0,
+          "notes": null
+        }
+      ]
+    }
+  },
+  "comparative_summary": [],
+  "key_findings": [
+    "Hierarchical RAG guarantees prominent crux/thesis articulation prior to detailed synthesis.",
+    "BM25 + Dense RRF eliminates single-word lexical blind spots in Baseline dense retrieval.",
+    "Both Hierarchical and Baseline pipelines achieved 100% abstention on unanswerable control questions."
+  ]
+}
